@@ -1,0 +1,29 @@
+ATIVIDADE BANCO DE DADOS 
+
+A) TT Pnome, Minicial, Unome (FUNCIONARIO)
+
+B) TT Pnome, Minicial, Unome (σ Sexo='F' (FUNCIONARIO))
+
+C) TT Pnome, Unome, Idade (σ Pnome LIKE 'A%N' (FUNCIONARIO))
+
+D) ℱ MAX(Salario) (σ Dnome='Pesquisa' (FUNCIONARIO |X| Dnr=Dnumero DEPARTAMENTO))
+
+E) ℱ MIN(Salario) (σ Projlocal='São Paulo' (FUNCIONARIO |X| Cpf=Fcpf TRABALHA_EM |X| Pnr=Projnumero PROJETO))
+
+F) TT Nome_dependente (σ Pnome LIKE 'A%' (FUNCIONARIO |X| Cpf=Fcpf DEPENDENTE))
+
+G) TT Fcpf (σ Nome_dependente='Joana Bagual' (DEPENDENTE))
+
+H) TT Pnome, Unome, Dnome (σ Projnome='Cama Hiperbárica' (FUNCIONARIO |X| Cpf=Fcpf TRABALHA_EM |X| Pnr=Projnumero PROJETO |X| Dnr=Dnumero DEPARTAMENTO))
+
+I) TT F2.Cpf, F1.Cpf (FUNCIONARIO F1 |X| F1.Cpf_supervisor=F2.Cpf FUNCIONARIO F2)
+
+J) TT Pnome, Unome, Dnome, Dlocal (σ Horas=MAX(Horas) (FUNCIONARIO |X| Cpf=Fcpf TRABALHA_EM |X| Dnr=Dnumero DEPARTAMENTO |X| Dnumero=Dnumero LOCALIZACOES_DEP))
+
+K) σ Cpf_supervisor IS NULL (FUNCIONARIO)
+
+L) TT Pnome, Unome (σ Horas>15 AND Horas<30 (FUNCIONARIO |X| Cpf=Fcpf TRABALHA_EM))
+
+M) TT Pnome, Unome (σ (Projlocal='São Paulo' AND Horas BETWEEN 10 AND 20) OR (Projlocal='Rio de Janeiro' AND Horas≥15) (FUNCIONARIO |X| Cpf=Fcpf TRABALHA_EM |X| Pnr=Projnumero PROJETO))
+
+
