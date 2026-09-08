@@ -18,13 +18,13 @@ D) 3 -select max(salario)
 1- from funcionário join departamento on(dnr = dnumero)
 2- where dnome = 'Pesquisa';
 
-TT max(salario)(~dnome='Pesquisa'(funcionário |x|~dnr=dnumero departamento))
+TT MAX(salario)(~dnome='Pesquisa'(funcionário |x|~dnr=dnumero departamento))
 
 junc <- (funcionário |x|~dnr=dnumero departamento)
 res <- ~dnome='Pesquisa'(junc)
 proj <- TT max(salario) res
 
-E) ℱ MIN(Salario) (σ Projlocal='São Paulo' (FUNCIONARIO |X| Cpf=Fcpf TRABALHA_EM |X| Pnr=Projnumero PROJETO))
+E) TT MIN(Salario) (σ Projlocal='São Paulo' (FUNCIONARIO |X| Cpf=Fcpf TRABALHA_EM |X| Pnr=Projnumero PROJETO))
 
 F) TT Nome_dependente (σ Pnome LIKE 'A%' (FUNCIONARIO |X| Cpf=Fcpf DEPENDENTE))
 
