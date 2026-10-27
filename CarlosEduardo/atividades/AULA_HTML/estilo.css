@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #1e2a78;   /* azul profundo */
-    --secundary-color: #14a3a8; /* turquesa */
-    --accent-color: #f2b134;    /* âmbar, só para foco e detalhes */
-    --link-hover: #0e7c86;      /* turquesa escuro, legível sobre branco */
+    --primary-color: #1e2a78;   
+    --secundary-color: #14a3a8; 
+    --accent-color: #f2b134;    
+    --link-hover: #0e7c86;      
     --bg-color: #eef2f8;
     --card-bg: #ffffff;
     --text-main: #14213d;
@@ -27,7 +27,7 @@ body {
     padding: 24px;
 }
 
-/* ---------- Linhas divisórias (hr) ---------- */
+
 hr {
     border: 0;
     border-top: 1px solid var(--border-color);
@@ -39,7 +39,6 @@ header + hr {
     display: none;
 }
 
-/* ---------- Cabeçalho ---------- */
 header {
     /* o "(" precisa ficar colado em linear-gradient, senão o CSS ignora tudo */
     background: linear-gradient(135deg, var(--primary-color), var(--secundary-color));
@@ -62,7 +61,7 @@ header p {
     opacity: 0.92;
 }
 
-/* ---------- Menu ---------- */
+
 nav {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -71,7 +70,6 @@ nav {
     margin-bottom: 2rem;
 }
 
-/* o título "Menu" fica só para leitores de tela */
 nav h2 {
     position: absolute;
     width: 1px;
@@ -103,7 +101,7 @@ nav a:focus-visible {
     color: #fff;
 }
 
-/* ---------- Layout principal: artigos + barra lateral ---------- */
+
 main {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 280px;
@@ -116,7 +114,7 @@ main section > h2 {
     margin-bottom: 1.25rem;
 }
 
-/* ---------- Artigos ---------- */
+
 article {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -126,7 +124,7 @@ article {
     box-shadow: 0 4px 14px -8px rgba(30, 42, 120, 0.25);
 }
 
-/* o <br> entre os artigos não é mais necessário */
+
 article + br {
     display: none;
 }
@@ -140,7 +138,7 @@ article p {
     margin-bottom: 1rem;
 }
 
-/* linha "Publicado em ..." */
+
 article p:first-of-type {
     color: var(--text-muted);
     font-size: 0.95rem;
@@ -169,7 +167,7 @@ article a:hover {
     color: var(--link-hover);
 }
 
-/* ---------- Barra lateral ---------- */
+
 aside {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -209,6 +207,16 @@ aside ol {
     padding-left: 1.4rem;
 }
 
+aside ol a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+aside ol a:hover {
+    color: #e63946;
+}
+
 aside li {
     margin-bottom: 0.25rem;
 }
@@ -221,7 +229,6 @@ aside a:hover {
     color: var(--link-hover);
 }
 
-/* ---------- Links em geral ---------- */
 a {
     color: var(--primary-color);
 }
@@ -231,14 +238,13 @@ a:focus-visible {
     outline-offset: 2px;
 }
 
-/* ---------- Rodapé ---------- */
+
 footer {
     text-align: center;
     color: var(--text-muted);
     font-size: 0.9rem;
 }
 
-/* ---------- Tablet e celular ---------- */
 @media (max-width: 800px) {
     main {
         grid-template-columns: 1fr;
