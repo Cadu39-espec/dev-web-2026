@@ -27,7 +27,6 @@ body {
     padding: 24px;
 }
 
-
 hr {
     border: 0;
     border-top: 1px solid var(--border-color);
@@ -38,6 +37,7 @@ hr {
 header + hr {
     display: none;
 }
+
 
 header {
     /* o "(" precisa ficar colado em linear-gradient, senão o CSS ignora tudo */
@@ -69,6 +69,7 @@ nav {
     padding: 0.75rem 1.25rem;
     margin-bottom: 2rem;
 }
+
 
 nav h2 {
     position: absolute;
@@ -138,7 +139,7 @@ article p {
     margin-bottom: 1rem;
 }
 
-
+/* linha "Publicado em ..." */
 article p:first-of-type {
     color: var(--text-muted);
     font-size: 0.95rem;
@@ -166,7 +167,6 @@ article a {
 article a:hover {
     color: var(--link-hover);
 }
-
 
 aside {
     background: var(--card-bg);
@@ -205,16 +205,16 @@ aside h3 {
 
 aside ol {
     padding-left: 1.4rem;
-}
 
-aside ol a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-}
+    a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
 
-aside ol a:hover {
-    color: #e63946;
+        &:hover {
+            color: #e63946;
+        }
+    }
 }
 
 aside li {
@@ -228,6 +228,7 @@ aside a {
 aside a:hover {
     color: var(--link-hover);
 }
+
 
 a {
     color: var(--primary-color);
@@ -244,6 +245,7 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
 }
+
 
 @media (max-width: 800px) {
     main {
@@ -263,4 +265,185 @@ footer {
     header h1 {
         font-size: 1.8rem;
     }
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+[id] {
+    scroll-margin-top: 1rem;
+}
+
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+.conteudo section {
+    margin-bottom: 2rem;
+}
+
+/* figuras com legenda */
+figure {
+    margin-bottom: 1rem;
+}
+
+article figure img {
+    margin-bottom: 0;
+}
+
+figcaption {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+}
+
+
+code {
+    font-family: Consolas, "Courier New", monospace;
+    background: var(--bg-color);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+pre {
+    background: var(--text-main);
+    color: #eef2f8;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+article ul {
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+
+.tabela {
+    overflow-x: auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 14px -8px rgba(30, 42, 120, 0.25);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    font-weight: 700;
+    padding: 1rem 1rem 0.5rem;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+thead th {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+.formulario {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    box-shadow: 0 4px 14px -8px rgba(30, 42, 120, 0.25);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    font: inherit;
+    color: var(--text-main);
+    background: #fff;
+    border: 1px solid #b6c2d6;
+    border-radius: 8px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--accent-color);
+    border-color: var(--primary-color);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    justify-self: start;
+    padding: 0.7rem 1.4rem;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secundary-color));
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.15);
+}
+
+/* barra lateral e rodapé */
+aside p {
+    margin-bottom: 0.5rem;
+}
+
+aside p:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+footer p + p {
+    margin-top: 0.25rem;
 }
