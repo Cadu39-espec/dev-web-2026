@@ -41,3 +41,5 @@ Os erros aparecem na tela, e a mensagem pode ser enviada pelo **WhatsApp** (`win
 
 - GitHub: https://github.com/Cadu39-espec
 - E-mail: carlosfranciscopinto10@gmail.com
+
+  linnk site postado com sucesso - https://cadu39-espec.github.io/dev-web-2026/
