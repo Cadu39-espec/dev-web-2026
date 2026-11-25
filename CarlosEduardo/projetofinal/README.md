@@ -1,12 +1,12 @@
-# Portfólio Pessoal — Carlos Eduardo
+// Portfólio Pessoal — Carlos Eduardo
 
 Projeto final da disciplina de desenvolvimento web (dev-web-2026): meu portfólio pessoal, responsivo, com apresentação, projetos, skills e formulário de contato.
 
-## 🔗 Site publicado
+// 🔗 Site publicado
 
 https://cadu39-espec.github.io/dev-web-2026/
 
-## Sobre o projeto
+// Sobre o projeto
 
 Sou Carlos Eduardo, estudante de Análise e Desenvolvimento de Sistemas. Este site reúne quem eu sou, as tecnologias que estou aprendendo e os projetos que construí.
 
@@ -25,7 +25,7 @@ Os erros aparecem na tela, e a mensagem pode ser enviada pelo **WhatsApp** (`win
 - JavaScript (DOM, eventos e validação)
 - Git e GitHub Pages
 
-## Estrutura
+// Estrutura
 
 ```
 ├── index.html
@@ -37,9 +37,8 @@ Os erros aparecem na tela, e a mensagem pode ser enviada pelo **WhatsApp** (`win
     └── user-sobre.jpg
 ```
 
-## Contato
+// Contato
 
 - GitHub: https://github.com/Cadu39-espec
 - E-mail: carlosfranciscopinto10@gmail.com
 
-  linnk site postado com sucesso - https://cadu39-espec.github.io/dev-web-2026/
